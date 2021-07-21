@@ -173,6 +173,15 @@ function listarProdutosFornecedor($vConn, $id){
 }
 
 /*----------------------------------------------------------------------------*/
+function listarFornecedores($vConn){
+    $sqlForn = "Select * from suppliers";    
+    $rsForn = mysqli_query($vConn, $sqlForn) or die(mysqli_error($vConn));
+    
+    return $rsForn;
+    
+}
+
+/*----------------------------------------------------------------------------*/
 function listarFornecedoresProduto($vConn, $id){
     $sqlVendas = "SELECT * FROM suppliers  INNER JOIN products ON products.SupplierID = suppliers.SupplierID WHERE ProductID = $id";    
     $rsVendas = mysqli_query($vConn, $sqlVendas) or die(mysqli_error($vConn));
@@ -220,6 +229,18 @@ function corrigirData($tmpData){
 }
 
 /*----------------------------------------------------------------------------*/
+function verificaQtde($vConn, $idProd, $qCompra){
+    $sqlQtde = "Select UnitsInStock from products where productID = $idProd";
+    $rsQtde = mysqli_query($vConn, $sqlQtde) or die(mysqli_error($vConn));
+    
+    $tblQtde = mysqli_fetch_array($rsQtde);
+    
+    $qAtual = $tblQtde['UnitsInStock'];
+    
+    if($qCompra > $qAtual) return false;
+    else return true;    
+}
+/*----------------------------------------------------------------------------*/
 
 function registrarItens($vConn, $sessItens, $idPed){
     
@@ -233,6 +254,9 @@ function registrarItens($vConn, $sessItens, $idPed){
         $sqlCadItem = "Insert into orderdetails(orderId, ProductId, quantity) values(";
         $sqlCadItem .= "$idPed,$idProd,$qProd)";
         
+        $sqlAlteraQtde = "Update products set UnitsinStock = UnitsinStock - $qProd where ProductId = $idProd";
+        
+        mysqli_query($vConn, $sqlAlteraQtde) or die(mysqli_error($vConn));
         mysqli_query($vConn, $sqlCadItem) or die(mysqli_error($vConn));
         
         //echo $sqlCadItem . "<br><br>";

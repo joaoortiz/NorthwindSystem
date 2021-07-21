@@ -295,7 +295,7 @@
                 } else if ($idPg == 30) {
                     //Fornecedores
                     $tabela = "suppliers";
-                    include "Lista.php";
+                    include "ListaFornecedores.php";
                 } else if ($idPg == 31) {
                     include "InfoFornecedor.php";
                 } else if ($idPg == 32) {

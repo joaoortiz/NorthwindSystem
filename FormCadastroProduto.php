@@ -5,7 +5,7 @@ $rsForn = listarRegistros($vConn, "Suppliers");
 
 $dadosForm = array("", "", "", "", "", "", "", "", "");
 $textoBotao = "Cadastrar Produto";
-$destino = "CadastroProduto.php";
+$destino = "CadastroDados.php";
 $tituloForm = "Cadastro";
 
 $acao = $_GET['acao'];
@@ -24,7 +24,9 @@ if ($acao == 2) {
     }
 }
 ?>
-
+<br>
+<img src="img/bproducts.jpg" class="img-fluid">
+<hr>
 <form action="<?= $destino; ?>" method="post">
     <div class="row LinhaForm">
         <div class="col-lg-6">

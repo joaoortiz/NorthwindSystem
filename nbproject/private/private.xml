@@ -3,12 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/PHP/NorthwindSystem/FormCadastroProduto.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/FormCadastroCliente.php</file>
             <file>file:/D:/PHP/NorthwindSystem/FuncoesDAO.php</file>
             <file>file:/D:/PHP/NorthwindSystem/AlteraProduto.php</file>
-            <file>file:/D:/PHP/NorthwindSystem/FormCadastroProduto.php</file>
-            <file>file:/D:/PHP/NorthwindSystem/CadastroDados.php</file>
-            <file>file:/D:/PHP/NorthwindSystem/FormCadastroCliente.php</file>
             <file>file:/D:/PHP/NorthwindSystem/AlteraCliente.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/CadastroDados.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/FormCadastroFuncionario.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/Painel.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/ListaProdutos.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/AjustarValores.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/RegistraVenda.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/AdicionarItem.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/FormCadastroVenda.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/FormCadastroFornecedor.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/ListaClientes.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/ListaFuncionarios.php</file>
+            <file>file:/D:/PHP/NorthwindSystem/ListaFornecedores.php</file>
         </group>
     </open-files>
 </project-private>
